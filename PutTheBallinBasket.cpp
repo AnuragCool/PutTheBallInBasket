@@ -89,16 +89,14 @@ void displayScoreboard(vector<Player> p){
 }
 
 void rules(){
-    cout << "\t======PUT THE BALL IN BASKET RULES!======\n\n";
+    cout << "\n\n\t======PUT THE BALL IN BASKET RULES!======\n\n";
     cout << "\t1. Enter the magnitude of force \n";
     cout << "\t2. After each Ball Droped in the Basket Directly Player gets 50 Points \n";  
     cout << "\t3. After each Ball Droped in the Basket indirectly, Player gets 25 Points \n";
     cout << "\t4. If ball missed Basket, Player gets 0 Points \n\n";
 }
 
-int main(){
-	cout<<"\n\t\t============================== Put The Ball in Basket ==========================\n"<<endl;
-		rules();
+void start(){
 		int n;
 		cout<<"\n\t--------------------------------------------------";
 		cout<<"\n\tEnter the number of Players(atleast 2 Players) : ";
@@ -143,8 +141,30 @@ int main(){
 			}
 		}
 
-			return 0;
 }
+
+int main(){
+	cout<<"\n\t\t============================== Put The Ball in Basket ==========================\n"<<endl;
+
+		int o;
+		while(true){
+			cout<<"\n\t1.Start the Game\n\t2.Display Game Rules\n\t3.Show History\n\t4.Exit";
+			cout<<"\n\n\tEnter your choice : ";
+			cin>>o;
+			switch(o){
+				case 1:start();
+				       break;
+				case 2:rules();
+				       break;
+				case 3:cout<<"Coming Soon";
+				       break;
+				case 4:exit(0);
+
+			}
+		}
+		return 0;
+}
+
 
 
 			
